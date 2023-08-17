@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Paragraph from './components/Paragraph';
+import Anchor from './components/Anchor';
+import Image from './components/Image';
+import ImageProp from './components/ImageProp';
+import Popover from './components/Popover';
+
+import logo from "./logo.svg";
+
+import './App.scss';
+import ChangableButton from './components/ChangableButton';
+import Button from './components/Button';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ImageProp src={logo} />
+        <Image />
+        <Paragraph>Hello World!</Paragraph>
+        <Paragraph>Developed by Sinem Varol</Paragraph>
+        <Anchor />
       </header>
+      <section>
+        <Popover buttonText="Click">Lorem ipsum dolor sit amet</Popover>
+        <ChangableButton/>
+
+        <Button/>
+
+      </section>
     </div>
   );
 }
